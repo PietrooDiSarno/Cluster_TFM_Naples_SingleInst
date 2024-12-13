@@ -7,7 +7,7 @@ shapely
 spiceypy
 
 # External modules
-pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
+#pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
 
 # External modules
-pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
+#pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
