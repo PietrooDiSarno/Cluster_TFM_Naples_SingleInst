@@ -8,8 +8,8 @@ version = "0.1"
 description = "Single Instrument data precomputation"
 readme = "README.md"
 authors = [
-    {name = "Piertro DiSarno", email=,
-    name = 'Imma Francesa', email = }
+    {name = "Piertro DiSarno", email = pablo.torres.rubio@estudiantat.upc.edu,
+    name = 'Imma Francesa', email = pablo.torres.rubio@estudiantat.upc.edu}
 ]
 license = { file = "LICENSE" }
 classifiers = [
