@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Cluster_TFM_Naples_SingleInst"
+version = "0.1"
+description = "Single Instrument data precomputation"
+readme = "README.md"
+authors = [
+    {name = "Piertro DiSarno", email=,
+    name = 'Imma Francesa', email = }
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 1 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+]
+
+keywords = ["SPICE", "JPL"]
+dependencies = [ "numpy", "pandas", "spiceypy" ]
+
+[project.urls]
+Repository = "https://github.com/PietrooDiSarno/Cluster_TFM_Naples_SingleInst"
+
+[tool.setuptools.packages.find]
+where = ["./"]
+include = ["FuturePackage",
+          "area_coverage_planning_python"]
