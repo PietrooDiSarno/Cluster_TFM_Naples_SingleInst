@@ -2,14 +2,14 @@ import numpy as np
 import copy
 from shapely.geometry import MultiPolygon, Polygon
 
-from conversion_functions import mat2py_et2utc
-from mosaic_algorithms.auxiliar_functions.polygon_functions.visibleroi import visibleroi
-from mosaic_algorithms.auxiliar_functions.polygon_functions.interppolygon import interppolygon
-from mosaic_algorithms.sidewinder.planSidewinderTour import planSidewinderTour
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.footprint import footprint
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.processObservation import processObservation
-from mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import sortcw
-from mosaic_algorithms.online_frontier_repair.updateGrid import updateGrid
+from area_coverage_planning_python.conversion_functions import mat2py_et2utc
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.visibleroi import visibleroi
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.interppolygon import interppolygon
+from area_coverage_planning_python.mosaic_algorithms.sidewinder.planSidewinderTour import planSidewinderTour
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.footprint import footprint
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.processObservation import processObservation
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import sortcw
+from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.updateGrid import updateGrid
 
 def frontierRepair(startTime, endTime, tobs, inst, sc, target, inroi, olapx, olapy, slewRate, *args):
     """

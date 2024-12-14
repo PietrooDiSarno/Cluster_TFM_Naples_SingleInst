@@ -259,7 +259,7 @@ else:
 kf = kernelFetch()
 kf.ffList(urlKernelL=METAKR, forceDownload=False)
 
-
+print('checkOneROI activated')
 if target_body == "GANYMEDE":
     ROIs_filename = "../../../data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
 else:

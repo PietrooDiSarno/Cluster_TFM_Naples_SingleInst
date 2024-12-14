@@ -4,7 +4,7 @@ import numpy as np
 from scipy.spatial import ConvexHull
 from shapely.geometry import Polygon
 
-from mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import sortcw
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import sortcw
 
 
 def minimumWidthDirection(x_, y_):

@@ -1,4 +1,5 @@
-from mosaic_algorithms.paper.figure3.input_data_fig3 import roistruct
+from area_coverage_planning_python.mosaic_algorithms.paper.figure3.input_data_fig3 import roistruct
+from area_coverage_planning_python.mosaic_algorithms.paper.figure3.input_data_fig3 import roistruct
 from mosaic_algorithms.auxiliar_functions.multiprocess.spawnProcess import *
 
 

@@ -1,7 +1,8 @@
 import numpy as np
-from conversion_functions import *
-from mosaic_algorithms.auxiliar_functions.grid_functions.topo2inst import topo2inst
-from mosaic_algorithms.auxiliar_functions.plot.trgobsvec import trgobsvec
+#from area_coverage_planning_python.mosaic_algorithms.paper.figure3.input_data_fig3 import roistruct
+from area_coverage_planning_python.conversion_functions import *
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.grid_functions.topo2inst import topo2inst
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.plot.trgobsvec import trgobsvec
 
 def fovray(inst, target, obs, et, lon, lat, *varargin):
     # Pre-allocate variables

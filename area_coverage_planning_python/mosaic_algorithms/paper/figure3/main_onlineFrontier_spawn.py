@@ -1,9 +1,9 @@
 
 import importlib
 import sys
-from mosaic_algorithms.auxiliar_functions.multiprocess.dataHandling import dataHandling
-from mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
-from mosaic_algorithms.paper.figure3.input_data_fig3 import *  # Load mission info (kernels, SPICE ids, etc.)
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.multiprocess.dataHandling import dataHandling
+from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
+from area_coverage_planning_python.mosaic_algorithms.paper.figure3.input_data_fig3 import *  # Load mission info (kernels, SPICE ids, etc.)
 
 
 # Revision of grid discretization:

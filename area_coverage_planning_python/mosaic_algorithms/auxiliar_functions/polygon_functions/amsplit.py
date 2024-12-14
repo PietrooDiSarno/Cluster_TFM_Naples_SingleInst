@@ -2,7 +2,7 @@ import copy
 
 import numpy as np
 from shapely.geometry import MultiPolygon, Polygon
-from mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import  sortcw
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import  sortcw
 
 
 def amsplit(x_, y_):

@@ -2,7 +2,7 @@ import numpy as np
 from shapely.geometry import MultiPolygon, Polygon, LineString
 from math import cos, sin, radians
 import math
-from conversion_functions import *
+from area_coverage_planning_python.conversion_functions import *
 
 def closestSide(gt1, gt2, targetArea, angle):
     """

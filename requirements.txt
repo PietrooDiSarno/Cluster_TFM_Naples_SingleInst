@@ -6,8 +6,10 @@ scipy
 shapely
 spiceypy
 
-# External modules
-#pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
+#External modules
+pySPICElib @ git+https://github.com/ManelSoria/pySPICElib@tests/manel5
 
-# External modules
-#pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
+PSOA @ git+https://github.com/PauBet/PSOA@test/pablo_oplan1
+
+#Future (maybe) alternative. Cannot yet be used:
+# pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git

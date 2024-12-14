@@ -1,5 +1,5 @@
 import numpy as np
-from mosaic_algorithms.online_frontier_repair.map2grid import map2grid
+from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.map2grid import map2grid
 
 def checkTaboo(N, Nind, map, ind_row, ind_col, indir1, indir2):
     """

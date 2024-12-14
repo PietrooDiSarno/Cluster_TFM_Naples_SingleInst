@@ -2,9 +2,9 @@ import numpy as np
 from shapely.geometry import MultiPolygon, Polygon
 import copy
 
-from conversion_functions import mat2py_et2utc
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.footprint import footprint
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.slewDur import slewDur
+from area_coverage_planning_python.conversion_functions import mat2py_et2utc
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.footprint import footprint
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.slewDur import slewDur
 def processObservation(A, tour, fpList, poly1, t, slewRate, tobs, amIntercept, inst, sc, target, resolution):
     """
     This function handles the processing of an observation point by computing

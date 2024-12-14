@@ -3,7 +3,7 @@ import copy
 import numpy as np
 from scipy.spatial import ConvexHull
 from shapely.geometry import MultiPolygon, Polygon, Point
-from mosaic_algorithms.auxiliar_functions.grid_functions.floodFillAlgorithm import floodFillAlgorithm
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.grid_functions.floodFillAlgorithm import floodFillAlgorithm
 
 
 def grid2D(fpref, olapx, olapy, gamma_, targetArea):
