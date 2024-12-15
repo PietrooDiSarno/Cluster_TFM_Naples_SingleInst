@@ -257,7 +257,7 @@ kf.ffList(urlKernelL=METAKR, forceDownload=False)
 #   a.1) Raw data info
 if target_body == ['GANYMEDE']:
     ROIs_filename = os.path.join("../../../data/roi_info/ganymede_roi_info.txt")  # Can be a list of strings or a single string
-    ROIs_antijovian = "../../../data/roi_info/ganymede_anti_jovian.txt"
+    ROIs_antijovian = os.path.join("../../../data/roi_info/ganymede_anti_jovian.txt")
 else:
       if target_body ==["CALLISTO"]:
           ROIs_filename = os.path.join("../../../data/roi_info/callisto_roi_info.txt")  # Can be a list of strings or a single string
