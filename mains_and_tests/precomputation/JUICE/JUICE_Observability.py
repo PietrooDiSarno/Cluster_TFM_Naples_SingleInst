@@ -255,12 +255,12 @@ kf.ffList(urlKernelL=METAKR, forceDownload=False)
 #   a) ROI INFO
 #   a.1) Raw data info
 if target_body == ['GANYMEDE']:
-    ROIs_filename = "../../../data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
-    ROIs_antijovian = "../../../data/roi_info/ganymede_anti_jovian.txt"
+    ROIs_filename = "Cluster_TFM_Naples_SingleInst/data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
+    ROIs_antijovian = "Cluster_TFM_Naples_SingleInst/data/roi_info/ganymede_anti_jovian.txt"
 else:
       if target_body ==["CALLISTO"]:
-          ROIs_filename = "../../../data/roi_info/callisto_roi_info.txt"  # Can be a list of strings or a single string
-          ROIs_antijovian = "../../../data/roi_info/callisto_anti_jovian.txt"
+          ROIs_filename = "Cluster_TFM_Naples_SingleInst/data/roi_info/callisto_roi_info.txt"  # Can be a list of strings or a single string
+          ROIs_antijovian = "Cluster_TFM_Naples_SingleInst/data/roi_info/callisto_anti_jovian.txt"
 
 DB = ROIDataBase(ROIs_filename, target_body)
 rois = DB.getROIs()
