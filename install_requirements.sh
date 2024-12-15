@@ -1,6 +1,6 @@
 #!/bin/bash
 # Standard requirements
-pip3 install -r requirements.txt
+pip3 install -r requirements_cluster.txt
 
 #LLOP packages
 #pySPICElib @ git+https://github.com/ManelSoria/pySPICElib.git
