@@ -4,6 +4,7 @@ from pySPICElib.kernelFetch import kernelFetch
 from FuturePackage.roiDataBase import ROIDataBase
 import subprocess
 from pySPICElib.SPICEtools import *
+import os
 
 if len(sys.argv) < 2:
     nAgents = input('Number of agents: ')
@@ -255,12 +256,12 @@ kf.ffList(urlKernelL=METAKR, forceDownload=False)
 #   a) ROI INFO
 #   a.1) Raw data info
 if target_body == ['GANYMEDE']:
-    ROIs_filename = "Cluster_TFM_Naples_SingleInst/data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
-    ROIs_antijovian = "Cluster_TFM_Naples_SingleInst/data/roi_info/ganymede_anti_jovian.txt"
+    ROIs_filename = os.path.join("../../../data/roi_info/ganymede_roi_info.txt")  # Can be a list of strings or a single string
+    ROIs_antijovian = "../../../data/roi_info/ganymede_anti_jovian.txt"
 else:
       if target_body ==["CALLISTO"]:
-          ROIs_filename = "Cluster_TFM_Naples_SingleInst/data/roi_info/callisto_roi_info.txt"  # Can be a list of strings or a single string
-          ROIs_antijovian = "Cluster_TFM_Naples_SingleInst/data/roi_info/callisto_anti_jovian.txt"
+          ROIs_filename = os.path.join("../../../data/roi_info/callisto_roi_info.txt")  # Can be a list of strings or a single string
+          ROIs_antijovian = os.path.join("../../../data/roi_info/callisto_anti_jovian.txt")
 
 DB = ROIDataBase(ROIs_filename, target_body)
 rois = DB.getROIs()
