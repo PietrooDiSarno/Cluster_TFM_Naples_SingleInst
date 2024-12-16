@@ -265,8 +265,8 @@ else:
 
 DB = ROIDataBase(ROIs_filename, target_body)
 rois = DB.getROIs()
-roinames = ['JUICE_ROI_GAN_5_0_09']
-#roinames = DB.getnames()
+#roinames = ['JUICE_ROI_GAN_5_0_09']
+roinames = DB.getnames()
 
 n_ROIs = int(nAgents)
 k = len(roinames) // n_ROIs
