@@ -10,7 +10,7 @@ class oPlanRoi(roi):
     def __init__(self, body, name, vertices):
         super().__init__(body, name, vertices)
         self.mosaic = None
-        self.ROI_TW = None #[[10, 30], [50, 120]]
+        self.ROI_TW = None  #[[10, 30], [50, 120]]
         self.ROI_ObsET = None
         self.ROI_ObsLen = None
         self.ROI_ObsImg = None
