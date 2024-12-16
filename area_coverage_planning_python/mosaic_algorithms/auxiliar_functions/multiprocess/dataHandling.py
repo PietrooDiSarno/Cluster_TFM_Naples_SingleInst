@@ -5,7 +5,7 @@ import matplotlib
 import numpy as np
 
 
-from conversion_functions import mat2py_et2utc
+from area_coverage_planning_python.conversion_functions import mat2py_et2utc
 
 
 class dataHandling:

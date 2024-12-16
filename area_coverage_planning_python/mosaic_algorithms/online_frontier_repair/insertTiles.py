@@ -1,6 +1,6 @@
 import copy
 import numpy as np
-from conversion_functions import *
+from area_coverage_planning_python.conversion_functions import *
 
 
 def insertTiles(*args):

@@ -1,5 +1,5 @@
 import numpy as np
-from conversion_functions import *
+from area_coverage_planning_python.conversion_functions import *
 from shapely.geometry import Polygon
 from pySPICElib.kernelFetch import kernelFetch
 

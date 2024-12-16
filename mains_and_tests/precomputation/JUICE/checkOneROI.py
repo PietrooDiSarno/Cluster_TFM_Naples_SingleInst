@@ -259,11 +259,11 @@ else:
 kf = kernelFetch()
 kf.ffList(urlKernelL=METAKR, forceDownload=False)
 
-
+print('checkOneROI activated')
 if target_body == "GANYMEDE":
-    ROIs_filename = "../../../data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
+    ROIs_filename = os.path.join("../../../data/roi_info/ganymede_roi_info.txt")  # Can be a list of strings or a single string
 else:
-    ROIs_filename = "../../../data/roi_info/callisto_roi_info.txt"  # Can be a list of strings or a single string
+    ROIs_filename = os.path.join("../../../data/roi_info/callisto_roi_info.txt")  # Can be a list of strings or a single string
 
 target_radii = spice.bodvrd(target_body, "RADII", 3)[1][1] # [km]
 

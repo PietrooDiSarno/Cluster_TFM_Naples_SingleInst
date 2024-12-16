@@ -1,9 +1,9 @@
 import numpy as np
 import copy
 from shapely.geometry import MultiPolygon, Polygon, Point
-from mosaic_algorithms.auxiliar_functions.observation_geometry.emissionang import emissionang
-from mosaic_algorithms.auxiliar_functions.polygon_functions.amsplit import amsplit
-from conversion_functions import *
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.observation_geometry.emissionang import emissionang
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.amsplit import amsplit
+from area_coverage_planning_python.conversion_functions import *
 
 def visibleroi(roi_, et, target, obs):
     """

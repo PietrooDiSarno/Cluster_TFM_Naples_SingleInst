@@ -1,7 +1,7 @@
 import numpy as np
 import math
 from geopy.distance import geodesic
-from mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import  sortcw
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import  sortcw
 
 def interppolygon(roi0):
     """

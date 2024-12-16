@@ -1,8 +1,8 @@
 import copy
 
-from mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
-from mosaic_algorithms.auxiliar_functions.plot.plotTour import plotTour
-from mosaic_algorithms.paper.figure3.input_data_fig3 import *  # Load mission info (kernels, SPICE ids, etc.)
+from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.plot.plotTour import plotTour
+from area_coverage_planning_python.mosaic_algorithms.paper.figure3.input_data_fig3 import *  # Load mission info (kernels, SPICE ids, etc.)
 import matplotlib.pyplot as plt
 import importlib
 

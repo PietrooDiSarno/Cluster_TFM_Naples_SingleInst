@@ -1,10 +1,10 @@
 import numpy as np
 
-from conversion_functions.mat2py_dpr import mat2py_dpr
-from conversion_functions.mat2py_reclat import mat2py_reclat
-from conversion_functions.mat2py_sincpt import mat2py_sincpt
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.instpointing import instpointing
-from conversion_functions.mat2py_cnmfrm import mat2py_cnmfrm
+from area_coverage_planning_python.conversion_functions.mat2py_dpr import mat2py_dpr
+from area_coverage_planning_python.conversion_functions.mat2py_reclat import mat2py_reclat
+from area_coverage_planning_python.conversion_functions.mat2py_sincpt import mat2py_sincpt
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.instpointing import instpointing
+from area_coverage_planning_python.conversion_functions.mat2py_cnmfrm import mat2py_cnmfrm
 
 def inst2topo(grid, lon, lat, target, sc, inst, et):
     """

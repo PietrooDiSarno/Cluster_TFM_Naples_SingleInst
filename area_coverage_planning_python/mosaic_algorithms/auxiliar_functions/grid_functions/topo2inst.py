@@ -1,10 +1,10 @@
 import copy
-from conversion_functions import *
+from area_coverage_planning_python.conversion_functions import *
 import numpy as np
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.instpointing import  instpointing
-from mosaic_algorithms.auxiliar_functions.plot.trgobsvec import trgobsvec
-from mosaic_algorithms.auxiliar_functions.observation_geometry.emissionang import emissionang
-from mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import sortcw
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.instpointing import  instpointing
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.plot.trgobsvec import trgobsvec
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.observation_geometry.emissionang import emissionang
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.sortcw import sortcw
 
 def topo2inst(inputdata_, lon, lat, target, sc, inst, et):
     """

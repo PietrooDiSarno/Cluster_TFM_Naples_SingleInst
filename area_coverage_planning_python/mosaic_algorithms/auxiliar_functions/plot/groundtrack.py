@@ -1,4 +1,4 @@
-from conversion_functions import *  # Import all conversion functions
+from area_coverage_planning_python.conversion_functions import *  # Import all conversion functions
 
 def groundtrack(obs, t, target):
     """

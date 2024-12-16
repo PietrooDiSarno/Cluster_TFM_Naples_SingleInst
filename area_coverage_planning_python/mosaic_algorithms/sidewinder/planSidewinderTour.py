@@ -1,14 +1,14 @@
 import numpy as np
 from shapely.geometry import MultiPolygon, Polygon
-from conversion_functions import *
-from conversion_functions import mat2py_getfov
-from mosaic_algorithms.auxiliar_functions.grid_functions.boustrophedon import boustrophedon
-from mosaic_algorithms.auxiliar_functions.grid_functions.grid2D import grid2D
-from mosaic_algorithms.auxiliar_functions.grid_functions.inst2topo import inst2topo
-from mosaic_algorithms.auxiliar_functions.grid_functions.topo2inst import topo2inst
-from mosaic_algorithms.auxiliar_functions.polygon_functions.closestSide import closestSide
-from mosaic_algorithms.auxiliar_functions.polygon_functions.minimumWidthDirection import minimumWidthDirection
-from mosaic_algorithms.auxiliar_functions.plot.groundtrack import groundtrack
+from area_coverage_planning_python.conversion_functions import *
+from area_coverage_planning_python.conversion_functions import mat2py_getfov
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.grid_functions.boustrophedon import boustrophedon
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.grid_functions.grid2D import grid2D
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.grid_functions.inst2topo import inst2topo
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.grid_functions.topo2inst import topo2inst
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.closestSide import closestSide
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.minimumWidthDirection import minimumWidthDirection
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.plot.groundtrack import groundtrack
 
 
 def planSidewinderTour(target, roi, sc, inst, inittime, olapx, olapy):

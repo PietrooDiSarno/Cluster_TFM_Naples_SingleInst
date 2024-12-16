@@ -1,5 +1,5 @@
 import numpy as np
-from mosaic_algorithms.online_frontier_repair.getMapNeighbours import getMapNeighbours
+from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.getMapNeighbours import getMapNeighbours
 def getFrontierTiles(map):
     """
     Given a grid of points (list of lists), this function outputs the set of points

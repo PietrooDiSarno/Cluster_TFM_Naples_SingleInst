@@ -1,4 +1,4 @@
-from conversion_functions import *
+from area_coverage_planning_python.conversion_functions import *
 import numpy as np
 
 
