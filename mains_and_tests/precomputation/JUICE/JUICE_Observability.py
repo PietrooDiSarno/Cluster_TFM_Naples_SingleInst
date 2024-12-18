@@ -1,10 +1,10 @@
+import copy
 import random
 import sys
 from pySPICElib.kernelFetch import kernelFetch
 from FuturePackage.roiDataBase import ROIDataBase
 import subprocess
 from pySPICElib.SPICEtools import *
-import os
 
 if len(sys.argv) < 2:
     nAgents = input('Number of agents: ')
@@ -256,17 +256,17 @@ kf.ffList(urlKernelL=METAKR, forceDownload=False)
 #   a) ROI INFO
 #   a.1) Raw data info
 if target_body == ['GANYMEDE']:
-    ROIs_filename = os.path.join("../../../data/roi_info/ganymede_roi_info.txt")  # Can be a list of strings or a single string
-    ROIs_antijovian = os.path.join("../../../data/roi_info/ganymede_anti_jovian.txt")
+    ROIs_filename = "../../../data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
+    ROIs_antijovian = "../../../data/roi_info/ganymede_anti_jovian.txt"
 else:
       if target_body ==["CALLISTO"]:
-          ROIs_filename = os.path.join("../../../data/roi_info/callisto_roi_info.txt")  # Can be a list of strings or a single string
-          ROIs_antijovian = os.path.join("../../../data/roi_info/callisto_anti_jovian.txt")
+          ROIs_filename = "../../../data/roi_info/callisto_roi_info.txt"  # Can be a list of strings or a single string
+          ROIs_antijovian = "../../../data/roi_info/callisto_anti_jovian.txt"
 
 DB = ROIDataBase(ROIs_filename, target_body)
 rois = DB.getROIs()
-roinames = ['JUICE_ROI_GAN_5_0_09']
-#roinames = DB.getnames()
+roinames = DB.getnames()
+
 
 n_ROIs = int(nAgents)
 k = len(roinames) // n_ROIs
@@ -305,20 +305,4 @@ for index in range(len(i_start)):
               print('** all finished')
               break
 
-      """
-      roiList = []
-      for name in roinames[i_start[index]:i_end[index]]:
-          patron = f"pickle_{name}.cfg"
-          for file in os.listdir("../../../data/roi_files"):
-              if file == patron:
-                  with open('../../../data/roi_files/pickle_' + name + '.cfg', "rb") as f:
-                      s, e, obsET, obsLen, obsImg, obsRes = pickle.load(f)
-                      tw = stypes.SPICEDOUBLE_CELL(2000)
-                      for i in range(len(s)):
-                          spice.wninsd(s[i], e[i], tw)
-                          for j in range(len(rois)):
-                              if rois[j].name == name:
-                                  rois[j].initializeObservationDataBase(roitw=tw, timeData=obsLen, nImg=obsImg, res=obsRes, mosaic = True)
-                                  continue
-      """
 
