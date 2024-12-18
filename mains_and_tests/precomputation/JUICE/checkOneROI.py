@@ -259,11 +259,11 @@ else:
 kf = kernelFetch()
 kf.ffList(urlKernelL=METAKR, forceDownload=False)
 
-print('checkOneROI activated')
+
 if target_body == "GANYMEDE":
-    ROIs_filename = os.path.join("../../../data/roi_info/ganymede_roi_info.txt")  # Can be a list of strings or a single string
+    ROIs_filename = "../../../data/roi_info/ganymede_roi_info.txt"  # Can be a list of strings or a single string
 else:
-    ROIs_filename = os.path.join("../../../data/roi_info/callisto_roi_info.txt")  # Can be a list of strings or a single string
+    ROIs_filename = "../../../data/roi_info/callisto_roi_info.txt"  # Can be a list of strings or a single string
 
 target_radii = spice.bodvrd(target_body, "RADII", 3)[1][1] # [km]
 
@@ -279,13 +279,12 @@ roi = DB.getROIs(roiname)
 observer = 'JUICE'
 
 flybys_ganymede =[["2033 NOV 26 18:22:11", "2033 NOV 27 18:22:11"],
-                  ["2034 JAN 14 06:38:51", "2034 JAN 15 06:38:51"],
-                  ["2034 JUN 05 18:53:51", "2034 JUN 06 18:53:51"],
-                  ["2034 JUL 11 19:50:31", "2034 JUL 12 19:50:31"],
-                  ["2034 SEP 07 06:03:51", "2034 SEP 08 06:03:51"],
-                  ["2034 SEP 28 18:48:51", "2034 SEP 29 18:48:51"],
-                  ["2034 NOV 18 09:58:51", "2034 NOV 19 09:58:51"]]
-#flybys_ganymede = [["2034 MAY 01 18:53:51", "2034 JUN 30 18:53:51"]]
+                 ["2034 JAN 14 06:38:51", "2034 JAN 15 06:38:51"],
+                 ["2034 JUN 05 18:53:51", "2034 JUN 06 18:53:51"],
+                 ["2034 JUL 11 19:50:31", "2034 JUL 12 19:50:31"],
+                 ["2034 SEP 07 06:03:51", "2034 SEP 08 06:03:51"],
+                 ["2034 SEP 28 18:48:51", "2034 SEP 29 18:48:51"],
+                 ["2034 NOV 18 09:58:51", "2034 NOV 19 09:58:51"]]
 
 flybys_callisto = [["2033 JAN 13 13:32:12", "2033 JAN 14 13:32:12"],
                    ["2032 SEP 27 04:26:36", "2032 SEP 28 04:26:36"],
@@ -349,7 +348,11 @@ for i in range(len(roi)):
                 begin, end = spice.wnfetd(roi[i].ROI_TW, interval)
                 b.append(begin)
                 e.append(end)
-            pickle.dump([b, e, roi[i].ROI_ObsET, roi[i].ROI_ObsLen, roi[i].ROI_ObsImg, roi[i].ROI_ObsRes], f)
+            if roi[i].mosaic:
+                pickle.dump([b, e, roi[i].ROI_ObsET, roi[i].ROI_ObsLen, roi[i].ROI_ObsImg, roi[i].ROI_ObsRes,
+                             roi[i].ROI_ObsCov], f)
+            else:
+                pickle.dump([b, e, roi[i].ROI_ObsET, roi[i].ROI_ObsLen, roi[i].ROI_ObsImg, roi[i].ROI_ObsRes], f)
             f.close()
 
     for j in range(spice.wncard(roi[i].ROI_TW)):
@@ -362,6 +365,10 @@ for i in range(len(roi)):
                 minRes = min(roi[i].ROI_ObsRes[j])
                 k = np.where(roi[i].ROI_ObsRes[j] == minRes)
                 minET = roi[i].ROI_ObsET[j][k]
+                if roi[i].mosaic:
+                    maxCov = max(roi[i].ROI_ObsCov[j])
+                    h = np.where(roi[i].ROI_ObsCov[j] == maxCov)
+                    maxET = roi[i].ROI_ObsET[j][h]
                 original_stdout = sys.stdout
 
                 stdout_fd = open(outfile, 'w')
@@ -373,6 +380,11 @@ for i in range(len(roi)):
                 print('t =', roi[i].ROI_ObsET[j])
                 print('minRes =', minRes)
                 print('minResTime =', minET)
+                if roi[i].mosaic:
+                    print('Cov(t) =', roi[i].ROI_ObsCov[j])
+                    print('maxCov =', maxCov)
+                    print('maxCovTime =', maxET)
+
                 stdout_fd.flush()
                 stdout_fd.close()
                 sys.stdout = original_stdout
@@ -381,3 +393,4 @@ for i in range(len(roi)):
 
 # if os.path.getsize(errorfile) == 0:
 #    os.remove(errorfile)
+
