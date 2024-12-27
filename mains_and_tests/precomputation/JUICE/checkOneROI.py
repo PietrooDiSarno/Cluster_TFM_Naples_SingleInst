@@ -1,4 +1,3 @@
-"""
 import random
 from pySPICElib.kernelFetch import kernelFetch
 from pySPICElib.SPICEtools import *
@@ -778,3 +777,4 @@ for i in range(len(roi)):
 
 # if os.path.getsize(errorfile) == 0:
 #    os.remove(errorfile)
+"""

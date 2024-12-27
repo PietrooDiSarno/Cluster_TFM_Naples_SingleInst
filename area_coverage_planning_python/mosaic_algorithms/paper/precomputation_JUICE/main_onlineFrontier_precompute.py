@@ -1,4 +1,3 @@
-"""
 from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.multiprocess.dataHandling import dataHandling
 from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
 from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.spacecraft_operation.computeResMosaic import computeResMosaic
@@ -37,7 +36,8 @@ def mosaicOnlineFrontier(timeint, inst, sc, ROIob, instrument, int):
 
     for init_time in timeint:
         # Online Frontier
-        A, fpList = frontierRepair(init_time, stoptime, tcadence, inst, sc, target, roi, olapx, olapy, 3 * 1e-3)
+        A, fpList = frontierRepair(init_time, stoptime, tcadence, inst, sc, target, roi, olapx, olapy, 3 * 1e-3,
+                            'highres')
         if not fpList == []:
             makespan.append(fpList[-1]['t'] + tcadence - init_time)
             nImg.append(len(fpList))
@@ -108,3 +108,4 @@ def mosaicOnlineFrontier(timeint, inst, sc, ROIob, instrument, int):
 
     # a,b,c,d = dh.getValues(mosaic, roiname, int)
     return makespan, nImg, resROI
+"""

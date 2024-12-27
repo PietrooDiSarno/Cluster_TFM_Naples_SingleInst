@@ -1,4 +1,3 @@
-"""
 import math
 import numpy as np
 
@@ -171,7 +170,7 @@ class oPlanRoi(roi):
         # print('t = ', t, '\n obsET = ', self.ROI_ObsET[interval][-1])
         res = np.interp(t, self.ROI_ObsET[interval], self.ROI_ObsRes[interval])
         return nimages, timeobs, res
-
+"""
 
 
 
