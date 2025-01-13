@@ -18,7 +18,7 @@ roiname = roistruct[0]['name'].lower().replace(" ", "")
 
 first_mosaic = mat2py_str2et('2034 JUN 06 06:45:30.000 UTC')
 last_mosaic = mat2py_str2et('2034 JUN 06 12:00:00.000 UTC')
-time_vec = np.linspace(first_mosaic, last_mosaic, 5, endpoint=True)
+time_vec = np.linspace(first_mosaic, last_mosaic, 14400, endpoint=True)
 
 for i, init_time in enumerate(time_vec):
     # Online Frontier
