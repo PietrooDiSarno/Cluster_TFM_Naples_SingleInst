@@ -2,7 +2,6 @@ import copy
 import os
 import pickle
 
-from mosaic_algorithms.auxiliar_functions.planetary_coverage.roicoverage import roicoverage
 from mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
 from mosaic_algorithms.paper.video.input_data_juice import *
 import matplotlib.pyplot as plt
