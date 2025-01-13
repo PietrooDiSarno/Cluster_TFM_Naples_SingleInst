@@ -2,11 +2,9 @@ import copy
 import os
 import pickle
 
-from mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
-from mosaic_algorithms.paper.video.input_data_juice import *
-import matplotlib.pyplot as plt
-import importlib
-from mosaic_algorithms.auxiliar_functions.spacecraft_operation.computeResMosaic import computeResMosaic
+from area_coverage_planning_python.mosaic_algorithms.online_frontier_repair.frontierRepair import frontierRepair
+from area_coverage_planning_python.mosaic_algorithms.paper.video.input_data_juice import *
+
 
 # Revision of grid discretization:
 # Grid is going to be built in the camera frame, instead of the body-fixed
