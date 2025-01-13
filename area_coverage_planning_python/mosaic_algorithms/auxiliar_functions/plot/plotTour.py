@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 from shapely.geometry import MultiPolygon, Polygon
 import numpy as np
-from mosaic_algorithms.auxiliar_functions.plot.groundtrack import groundtrack
-from mosaic_algorithms.auxiliar_functions.plot.mapPlot import mapPlot
-from mosaic_algorithms.auxiliar_functions.polygon_functions.amsplit import amsplit
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.plot.groundtrack import groundtrack
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.plot.mapPlot import mapPlot
+from area_coverage_planning_python.mosaic_algorithms.auxiliar_functions.polygon_functions.amsplit import amsplit
 
 
 def plotTour(tour, fplist, roistruct, sc, target, *args):
@@ -149,12 +149,13 @@ def plotTour(tour, fplist, roistruct, sc, target, *args):
                 labels.append(roistruct[i]['name'])
    #plt.pause(0.5)
     # Legend
-
+    '''
     unique_labels = dict(zip(labels, handles))
     legend = ax.legend(handles=unique_labels.values(), labels=unique_labels.keys(), loc='best', frameon=True)
     legend.get_frame().set_facecolor('white')
     legend.get_frame().set_alpha(1)
     plt.pause(3)
+    '''
     if video is not None:
         video.finish()
 
